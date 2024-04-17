@@ -35,7 +35,7 @@ export class AuthService {
                 }
             })
             //return the saved user
-            return this.signToken(user.id, user.email);
+            return user;
         } catch (err) {
             if(err instanceof PrismaClientKnownRequestError) {
                 if(err.code === 'P2002') {
